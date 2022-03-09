@@ -13,9 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.InitialArchitecture">
-        <activity android:name=".presentation.ui.main.MainActivity" />
+        <activity android:name=".presentation.ui.main.MainActivity"
+            android:configChanges="orientation|screenSize"/>
 
         <activity android:name=".presentation.ui.auth.AuthActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

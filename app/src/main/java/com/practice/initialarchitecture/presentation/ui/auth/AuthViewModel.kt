@@ -11,12 +11,15 @@ import com.practice.initialarchitecture.domain.models.*
 import com.practice.initialarchitecture.repository.AuthRepository
 import com.practice.initialarchitecture.util.Event
 import com.practice.initialarchitecture.util.Resource
+import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class AuthViewModel @ViewModelInject constructor(
-    @Assisted private val savedStateHandle: SavedStateHandle,
+@HiltViewModel
+class AuthViewModel @Inject constructor(
+    private val savedStateHandle: SavedStateHandle,
     @ApplicationContext private val context: Context,
     private val authRepository: AuthRepository
 ) : ViewModel() {
